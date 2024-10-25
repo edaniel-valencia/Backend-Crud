@@ -56,12 +56,14 @@ const Update = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     if (!user) {
         res.status(404).json('No se encontro registros');
     }
+    console.log(req.body);
     try {
         user_1.User.update({
             Uname: Uname,
             Ulastname: Ulastname,
             Uemail: Uemail,
-            Uwhatssap: Uwhatssap
+            Uwhatssap: Uwhatssap,
+            Ustatus: Ustatus
         }, {
             where: { Uid: Uid }
         });

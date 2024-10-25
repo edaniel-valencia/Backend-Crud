@@ -72,12 +72,16 @@ export const Update = async (req: Request, res: Response) => {
 
     }
 
+
+    console.log(req.body);
+    
     try {
         User.update({
             Uname: Uname,
             Ulastname: Ulastname,
             Uemail: Uemail,
-            Uwhatssap: Uwhatssap
+            Uwhatssap: Uwhatssap,
+            Ustatus: Ustatus
         },{
             where: {Uid: Uid}
         })
